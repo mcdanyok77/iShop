@@ -21,8 +21,8 @@ const ProductItem = ({ product }) => {
         <h3 className={styles['product-title']}>{product.model}</h3>
         <p className={styles.productDescription}>{product.description}</p>
         <div className={styles['product-price']}>{product.price} р.</div>
-        <button type="button" className={styles.productButton} onClick={handleAddToCart}>
-          Купить
+        <button type="button" className={styles['buy-button']} onClick={handleAddToCart}>
+          Buy Now
         </button>
       </div>
     </div>
