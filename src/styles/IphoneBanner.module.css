@@ -1,0 +1,37 @@
+.iphone-banner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 80vh;
+  padding: 0 5%;
+  color: white;
+  background:
+    linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("/images/iphone-banner.png");
+  background-size: cover;
+}
+
+.banner-content {
+  max-width: 600px;
+}
+
+.banner-title {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.shop-button {
+  padding: 15px 40px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  background: #0071e3;
+  border: none;
+  border-radius: 30px;
+}

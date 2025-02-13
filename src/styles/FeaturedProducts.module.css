@@ -1,0 +1,32 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 16px;
+  padding: 50px 160px;
+}
+
+.product-card {
+  width: 268px;
+  padding: 24px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 160px;
+  height: 160px;
+}
+
+.buy-button {
+  flex: 1;
+  gap: 8px;
+  padding: 12px 64px;
+  color: white;
+  background: #000;
+  border-radius: 8px;
+}
