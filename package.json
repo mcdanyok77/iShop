@@ -1,0 +1,45 @@
+{
+  "name": "iShop",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "tailwind:init": "tailwindcss init -p"
+  },
+  "devDependencies": {
+    "@shcherbin/eslint-config": "^0.15.9",
+    "@shcherbin/stylelint-config": "^0.2.0",
+    "@tailwindcss/postcss": "^4.0.6",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.20.0",
+    "postcss": "^8.5.1",
+    "postcss-html": "^1.8.0",
+    "stylelint": "^16.14.1",
+    "tailwindcss": "^4.0.6",
+    "tailwindcss-cli": "^0.1.2"
+  },
+  "dependencies": {
+    "@fontsource-variable/montserrat": "^5.1.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "bcryptjs": "^2.4.3",
+    "next": "^15.1.6",
+    "next-auth": "^4.24.11",
+    "pg": "^8.13.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "the-new-css-reset": "^1.11.3",
+    "vite": "^6.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "next>react": "$react",
+      "next>react-dom": "$react-dom"
+    }
+  },
+  "private": true,
+  "type": "module"
+}
