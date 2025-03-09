@@ -43,7 +43,8 @@ export const CartProvider = ({ children }) => {
   }
 
   return (
-    // eslint-disable-next-line @eslint-react/no-context-provider
+    // eslint-disable-next-line @stylistic/max-len
+    // eslint-disable-next-line @eslint-react/no-context-provider, @eslint-react/no-unstable-context-value
     <CartContext.Provider value={{
       addToCart,
       cart,
@@ -58,12 +59,3 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   )
 }
-
-// export const useCart = () => {
-//   const context = useContext(CartContext)
-//   if (!context) {
-//     throw new Error('useCart must be used within a CartProvider')
-//   }
-
-//   return context
-// }
