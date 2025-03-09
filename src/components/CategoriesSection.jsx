@@ -6,7 +6,7 @@ const CategoriesSection = () => {
     { name: 'iPhone', path: '/products/iphones' },
     { name: 'iPad', path: '/products/ipads' },
     { name: 'Watch', path: '/products/watches' },
-    { name: 'Mac', path: '/products/macbooks' },
+    { name: 'MacBook', path: '/products/macbooks' },
     { name: 'AirPods', path: '/products/headphones' },
     { name: 'Vision', path: '/products/visions' }
   ]

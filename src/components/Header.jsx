@@ -4,14 +4,13 @@ import styles from '../styles/Header.module.css'
 const Header = () => (
   <header className={styles.header}>
     <div className={styles['top-bar']}>
-      <div className={styles.logo}>iShop</div>
+      <Link href="/" className={styles.logo}>iShop</Link>
       <div className={styles.controls}>
-        <button type="button" className={styles['search-button']}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" strokeWidth="2" />
-            <path d="M21 21L16.65 16.65" stroke="currentColor" strokeWidth="2" />
-          </svg>
-        </button>
+        <nav className={styles['main-nav']}>
+          <Link href="/">Home</Link>
+          <Link href="/products/iphones">Shop</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
         <Link href="/cart" className={styles['cart-link']}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" />
@@ -21,13 +20,6 @@ const Header = () => (
         </Link>
       </div>
     </div>
-    <nav className={styles['main-nav']}>
-      <Link href="/">Home</Link>
-      <Link href="/products">Shop</Link>
-      <Link href="/about">About</Link>
-      <Link href="/blog">Blog</Link>
-      <Link href="/contact">Contact</Link>
-    </nav>
   </header>
 )
 
