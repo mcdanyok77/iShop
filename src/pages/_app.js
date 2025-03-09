@@ -1,6 +1,6 @@
 import Head from 'next/head'
+import { CartProvider } from '@/context/CartContext.js'
 import '@/styles/globals.css'
-import { CartProvider } from './src/context/CartContext.js'
 
 function MyApp({ Component, pageProps }) {
   return (
