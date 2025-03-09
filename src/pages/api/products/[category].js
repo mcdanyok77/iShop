@@ -7,7 +7,6 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Category is required' })
   }
 
-  // Маппинг категории на таблицу БД
   const tableMapping = {
     headphones: 'Headphones',
     ipads: 'iPads',
@@ -32,6 +31,8 @@ export default async function handler(req, res) {
     `)
     res.status(200).json(result.rows)
   } catch (err) {
-    res.status(500).json({ error: 'Database error' })
+    res.status(500).json(err, { error: 'Database error' })
   }
+
+  return 0
 }

@@ -12,8 +12,7 @@ export default async function handler(req, res) {
       )
       res.status(201).json(result.rows[0])
     } catch (err) {
-      console.error(err)
-      res.status(500).json({ message: 'Server Error' })
+      res.status(500).json({ err, message: 'Server Error' })
     }
   } else {
     res.status(405).json({ message: 'Method not allowed' })
