@@ -1,12 +1,21 @@
+.section h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: #1d1d1f;
+  text-align: center;
+}
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 16px;
-  padding: 50px 160px;
+  padding: 4rem 5%;
 }
 
 .product-card {
-  width: 268px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   padding: 24px 16px;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -14,19 +23,23 @@
 }
 
 .product-card:hover {
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
   transform: translateY(-5px);
 }
 
 .product-image {
-  width: 160px;
-  height: 160px;
+  height: 180px;
 }
 
 .buy-button {
-  flex: 1;
-  gap: 8px;
   padding: 12px 64px;
   color: white;
+  cursor: pointer;
   background: #000;
   border-radius: 8px;
+}
+
+.buy-button:hover {
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
+  transform: translateY(-5px);
 }

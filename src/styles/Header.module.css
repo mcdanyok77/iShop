@@ -19,6 +19,7 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: #1d1d1f;
+  text-decoration: none;
 }
 
 .controls {
@@ -43,12 +44,13 @@
   gap: 2.5rem;
   justify-content: center;
   padding: 1rem 0;
-  background: #f8f8f8;
 }
 
 .main-nav a {
+  font-size: 1.2rem;
   font-weight: 500;
   color: #1d1d1f;
+  text-decoration: none;
   transition: color 0.3s;
 }
 

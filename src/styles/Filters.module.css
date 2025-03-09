@@ -27,12 +27,12 @@
   align-items: center;
 }
 
-.filter-option input {
+#input {
   width: 16px;
   height: 16px;
 }
 
-.filter-option label {
+#label {
   font-size: 16px;
 }
 
@@ -46,8 +46,4 @@
   border: none;
   border-radius: var(--border-radius);
   transition: background-color 0.3s;
-}
-
-.filter-reset:hover {
-  background-color: darken(var(--accent-color), 10%);
 }

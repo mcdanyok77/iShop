@@ -21,6 +21,7 @@
 .category-card {
   padding: 2rem;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
   background: #f8f8f8;
   border-radius: 18px;
