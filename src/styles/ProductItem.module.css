@@ -75,6 +75,7 @@
 
 .buy-button {
   padding: 12px 64px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
   background: #000;

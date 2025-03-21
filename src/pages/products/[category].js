@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import CategoriesSection from '../../components/CategoriesSection.jsx'
 import Filters from '../../components/Filters.jsx'
@@ -13,7 +13,8 @@ export default function Products() {
   const { category } = router.query
   const [products, setProducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
-  const [setSortOption] = useState('rating')
+  // eslint-disable-next-line no-unused-vars
+  const [sortOption, setSortOption] = useState('rating')
   const [currentPage, setCurrentPage] = useState(1)
   const productsPerPage = 9
 
@@ -30,15 +31,11 @@ export default function Products() {
       })
   }, [category])
 
-  const handleFilter = (filters) => {
-    let updatedProducts = [...products]
-    if (filters.price) {
-      updatedProducts = updatedProducts.filter(
-        (product) => product.price >= filters.price.min && product.price <= filters.price.max
-      )
-    }
-    setFilteredProducts(updatedProducts)
-  }
+  const handleFilter = useCallback((filters) => {
+    setFilteredProducts(products.filter(
+      (product) => product.price >= filters.minPrice && product.price <= filters.maxPrice
+    ))
+  }, [products])
 
   const handleSort = (option) => {
     setSortOption(option)
@@ -54,7 +51,7 @@ export default function Products() {
       <Header />
       <CategoriesSection />
       <section className={styles['catalog-container']}>
-        <h1>Каталог {category}</h1>
+        <h1>{category} catalog</h1>
         <div className={styles.filters}>
           <Filters onFilterChange={handleFilter} />
         </div>

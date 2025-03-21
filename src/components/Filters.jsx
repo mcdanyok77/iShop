@@ -7,12 +7,41 @@ export default function Filters({ onFilterChange }) {
 
   return (
     <div className={styles['filters-container']}>
-      <h3>Фильтры</h3>
-      <label htmlFor="minPrice">Мин. цена: </label>
-      <input type="number" value={minPrice} onChange={(e) => setMinPrice(Number(e.target.value))} />
-      <label htmlFor="maxPrice">Макс. цена: </label>
-      <input type="number" value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value))} />
-      <button type="button" onClick={() => onFilterChange({ maxPrice, minPrice })}>Применить</button>
+      <h3 className={styles['filter-title']}>Filters</h3>
+      <div className={styles['filter-group']}>
+        <label htmlFor="minPrice">min. price: </label>
+        <input
+          type="number"
+          value={minPrice}
+          onChange={(e) => setMinPrice(Number(e.target.value))}
+        />
+      </div>
+      <div className={styles['filter-group']}>
+        <label htmlFor="maxPrice">max. price: </label>
+        <input
+          type="number"
+          value={maxPrice}
+          onChange={(e) => setMaxPrice(Number(e.target.value))}
+        />
+      </div>
+      <button
+        type="button"
+        className={styles['filter-reset']}
+        onClick={() => onFilterChange({ maxPrice, minPrice })}
+      >
+        Apply
+      </button>
+      <button
+        type="button"
+        className={styles['filter-reset']}
+        onClick={() => {
+          setMinPrice(0)
+          setMaxPrice(5000)
+          onFilterChange({ maxPrice: 5000, minPrice: 0 })
+        }}
+      >
+        Reset
+      </button>
     </div>
   )
 }
