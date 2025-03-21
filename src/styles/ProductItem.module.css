@@ -22,14 +22,14 @@
 
 .filter-select {
   width: 100%;
-  max-width: 300px;
+  max-width: 190px;
   padding: 8px;
   margin: 8px 0;
   font-size: 16px;
   color: #333;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   transition: border-color 0.3s ease;
 }
 
