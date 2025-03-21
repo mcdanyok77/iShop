@@ -65,8 +65,8 @@ export default function Products() {
         <Pagination
           currentPage={currentPage}
           productsPerPage={productsPerPage}
-          setCurrentPage={setCurrentPage}
           totalProducts={filteredProducts.length}
+          onPageChange={setCurrentPage}
         />
       </section>
       <Footer />
